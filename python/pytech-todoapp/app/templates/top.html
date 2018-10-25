@@ -1,0 +1,117 @@
+{% load static %}
+{% load bootstrap_tags %}
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>To-Doリスト</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'app/style.css' %}">
+    </head>
+    
+<body>
+	<header>
+		<section id="top">
+            <div id="icon">
+                {% if user and not user.is_anonymous %}
+                <img id="userimg" src="{% static 'app/user.svg' %}">
+                {% endif %}
+            </div>
+            
+            <div id="user">
+                {% if user and not user.is_anonymous %}
+                <div id="logout">
+                    <div id="userleft">
+                        <p id="welcome">ようこそ</p>
+                        <h3>{{ user.username }}</h3>
+                        <p id="mr">さん</p>
+                    </div>
+                    <a id="logoutbtn" type="submit" class="btn btn-lg btn-block pnkbtn" href="{% url 'app:userlogout' %}">LOGOUT</a>
+                </div>
+                  
+                {% else %}
+                <div id="login">
+                    <form action="{% url 'app:top' %}" method="POST">
+                        <div id="formleft">
+                            {{ loginform.non_field_errors }}
+                                {% for field in loginform %}
+                                {{ field }}
+                                {{ field.errors }}
+                                {% endfor %}
+                        </div>
+
+                        <button id="loginbtn" type="submit" class="btn btn-lg btn-block pnkbtn" >LOGIN</button>
+                        {% csrf_token %}
+                    </form>
+                </div>
+                {% endif %}
+            </div>
+		</section>
+
+		<div id="search_box">
+            <form action="{% url 'app:search' %}" method="POST">
+                <div id="searchleft">
+                    <table id="searchform" style="margin-top:20px;">
+                        {{ searchform|as_bootstrap }}
+                    </table>
+                </div>
+				<button id="srchbtn" type="submit"><i class="fas fa-search" id="srchaw"></i></button>
+                {% csrf_token %}
+            </form>
+		</div>
+	</header>
+　
+	<main>
+		<section id="left">
+   			<img id="logo" src="{% static 'app/PyTech.svg' %}" width="100%">
+		</section>
+
+		<section id="center">
+
+			<div id="now">
+				<form  action="{% url 'app:delete' %}" method="POST">
+				{% csrf_token %}
+                    {% for contribution in contributions %}
+					<div class="big_box" style="width:80%;">
+						<input id="chkbox" type="checkbox" name="delete_ids" value="{{ contribution.pk }}" />
+						<div id="theme">
+							<p>{{ contribution.theme }}</p>
+						</div>
+						<div id="deadline">
+							<p>{{ contribution.deadline }}</p>
+						</div>
+						<div id="memo">
+							<p>{{ contribution.memo }}</p>
+						</div>
+					</div>
+                    {% endfor %}
+				<button class="btn btn-lg btn-block pnkbtn" type="submit">完了</button>
+				</form>
+			</div>
+
+		</section>
+
+		<section id="lines">
+			<table style="height:100%; width: 1px; background-color: gray; border-collapse: collapse;">
+				<tr>
+				<td></td>
+				</tr>
+			</table>
+		</section>
+
+		<section id="right">
+
+			<form  action="{% url 'app:registration' %}" method="POST">
+				{{ form|as_bootstrap }}
+                {% csrf_token %}
+				<button id="regist" type="submit"><i class="fas fa-check" id="fntaw"></i></button>
+			</form>
+		</section>
+
+	</main>
+
+</body>
+</html>
