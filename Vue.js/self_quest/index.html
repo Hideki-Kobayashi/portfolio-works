@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107748549-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-107748549-2');
+  </script>
+
+
+  <meta charset="UTF-8">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Todoアプリ">
+  <meta name="twitter:descriptin" content="シンプルなTodoアプリです。">
+  <title>Todo</title>
+  <link rel="stylesheet" href="./src/style/style.css">
+
+  <!-- BootStrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="my-container" v-cloak>
+    <div class="container__header">
+      <div class="header">
+        <div class="header__left">
+          <div class="header__user-name">
+            Todoリスト produced by 小林秀樹（twitter:@hideki_climax）
+          </div>
+        </div>
+
+        <div class="header__right">
+          <div class="header__notification"></div>
+          <div class="header__search-form">
+            <input class="search-box" type="text" placeholder="🔍検索...">
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="container__body body">
+      <div class="body__sidebar sidebar">
+        <div class="sidebar-list"></div>
+        <div class="sidebar-add-btn">＋</div>
+      </div>
+      <div class="body__main main">
+        <div class="main__add-todo">
+          <form class="add-form" v-on:submit.prevent="doAdd">
+            <input class="add-todo" type="text" ref="comment">
+            <input class="add-date" type="date" ref="date">
+            <button class="add-btn" type="submit"></button>
+          </form>
+        </div>
+
+        <div class="main__todos">
+          <div class="todo-item" v-for="item in todos" v-bind:key="item.id">
+            <input class="todo-chkbox" type="checkbox" v-on:click="doRemove(item)">
+            <div class="todo-comment">{{ item.comment }}
+            </div>
+            <div class="todo-date">{{ item.date }}
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- BootStrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  <!-- Vue.js -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <script src="./src/js/main.js"></script>
+</body>
+
+</html>

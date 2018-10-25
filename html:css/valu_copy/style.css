@@ -1,0 +1,298 @@
+/*-----------------------------------
+*  default stylesheet
+*-----------------------------------*/
+/* line 4, /Users/hideki/Desktop/valu_copy/style.scss */
+* {
+  box-sizing: border-box; }
+
+/* line 8, /Users/hideki/Desktop/valu_copy/style.scss */
+html {
+  font-size: 62.5%; }
+
+/* line 12, /Users/hideki/Desktop/valu_copy/style.scss */
+body {
+  font-size: 1.6rem;
+  color: #323232;
+  margin: 0; }
+
+/* line 18, /Users/hideki/Desktop/valu_copy/style.scss */
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none; }
+
+/* line 24, /Users/hideki/Desktop/valu_copy/style.scss */
+img {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+/*-----------------------------------
+*  vars
+*-----------------------------------*/
+/*-----------------------------------
+*  inner stylesheet
+*-----------------------------------*/
+/* line 40, /Users/hideki/Desktop/valu_copy/style.scss */
+.inner {
+  width: 96rem;
+  height: inherit;
+  margin: auto; }
+
+/*-----------------------------------
+*  button stylesheet
+*-----------------------------------*/
+/* line 51, /Users/hideki/Desktop/valu_copy/style.scss */
+.va-btn {
+  width: 12rem;
+  height: 3.2rem;
+  font-size: 1.2rem;
+  border-radius: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+/* line 61, /Users/hideki/Desktop/valu_copy/style.scss */
+.va-btn-lg {
+  width: 38.4rem;
+  height: 5.6rem;
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  border-radius: 2.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+/* line 72, /Users/hideki/Desktop/valu_copy/style.scss */
+.va-btn-md {
+  width: 34rem;
+  height: 6rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  border-radius: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+/*-----------------------------------
+*  header stylesheet
+*-----------------------------------*/
+/* line 88, /Users/hideki/Desktop/valu_copy/style.scss */
+.header {
+  width: 100%;
+  height: 6.4rem;
+  background-color: #FCBE35;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0rem 0.5rem 0.3rem -0.3rem rgba(246, 186, 52, 0.6);
+  position: fixed; }
+
+/* line 98, /Users/hideki/Desktop/valu_copy/style.scss */
+.header-left {
+  width: 22rem;
+  height: inherit;
+  margin-left: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+/* line 107, /Users/hideki/Desktop/valu_copy/style.scss */
+.header-left__logo {
+  width: 11.5rem;
+  height: 2.1rem; }
+
+/* line 112, /Users/hideki/Desktop/valu_copy/style.scss */
+.header-left__find {
+  display: flex;
+  align-items: center; }
+
+/* line 117, /Users/hideki/Desktop/valu_copy/style.scss */
+.find-icon {
+  font-size: 2rem;
+  margin-right: 0.5rem; }
+
+/* line 122, /Users/hideki/Desktop/valu_copy/style.scss */
+.find-text {
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  color: white; }
+
+/* line 128, /Users/hideki/Desktop/valu_copy/style.scss */
+.header-right {
+  width: 40rem;
+  height: inherit;
+  display: flex;
+  align-items: center; }
+
+/* line 135, /Users/hideki/Desktop/valu_copy/style.scss */
+.header-right__search-icon {
+  font-size: 2rem;
+  margin-right: 3.2rem; }
+
+/* line 140, /Users/hideki/Desktop/valu_copy/style.scss */
+.header-right__question-icon {
+  font-size: 2rem;
+  margin-right: 3.2rem; }
+
+/* line 146, /Users/hideki/Desktop/valu_copy/style.scss */
+.header-right__login-btn {
+  background-color: white;
+  margin-right: 1.6rem;
+  font-weight: bold; }
+
+/* line 153, /Users/hideki/Desktop/valu_copy/style.scss */
+.header-right__register-btn {
+  color: white;
+  background-color: black; }
+
+/*-----------------------------------
+*  hero stylesheet
+*-----------------------------------*/
+/* line 164, /Users/hideki/Desktop/valu_copy/style.scss */
+.hero {
+  width: 100%;
+  height: 76.4rem;
+  padding-top: 6.4rem;
+  background-color: #FCBE35;
+  display: flex; }
+
+/* line 172, /Users/hideki/Desktop/valu_copy/style.scss */
+.hero__left {
+  width: 44rem;
+  height: inherit;
+  color: white;
+  padding-left: 4rem; }
+
+/* line 181, /Users/hideki/Desktop/valu_copy/style.scss */
+.hero__main-catch {
+  font-size: 4rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  margin-top: 19.2rem; }
+
+/* line 188, /Users/hideki/Desktop/valu_copy/style.scss */
+.hero__sub-catch {
+  margin-top: 1.4rem;
+  letter-spacing: 0.1rem; }
+
+/* line 193, /Users/hideki/Desktop/valu_copy/style.scss */
+.hero__start-btn {
+  color: #FCBE35;
+  background-color: white;
+  margin-top: 3.2rem; }
+
+/* line 199, /Users/hideki/Desktop/valu_copy/style.scss */
+.hero__dl-btn {
+  margin-top: 1.6rem;
+  border: 2px solid white; }
+
+/* line 204, /Users/hideki/Desktop/valu_copy/style.scss */
+.hero__image {
+  width: 79.2rem;
+  margin-left: 0.8rem; }
+
+/* line 211, /Users/hideki/Desktop/valu_copy/style.scss */
+.dl-btn-icon {
+  font-size: 2.4rem;
+  color: white;
+  margin-right: 0.8rem;
+  padding-bottom: 0.4rem; }
+
+/*-----------------------------------
+*  recommend stylesheet
+*-----------------------------------*/
+/* line 225, /Users/hideki/Desktop/valu_copy/style.scss */
+.recommend-section {
+  width: 100%;
+  height: 47.6rem;
+  background-color: #F7F7F7; }
+  /* line 230, /Users/hideki/Desktop/valu_copy/style.scss */
+  .recommend-section__inner {
+    padding-left: 7rem;
+    padding-right: 7rem;
+    display: flex; }
+  /* line 236, /Users/hideki/Desktop/valu_copy/style.scss */
+  .recommend-section__left {
+    width: 40%;
+    height: inherit;
+    padding-top: 9rem; }
+  /* line 242, /Users/hideki/Desktop/valu_copy/style.scss */
+  .recommend-section__main-catch {
+    font-size: 2.3rem;
+    letter-spacing: 0.2rem;
+    line-height: 3rem;
+    font-weight: bold;
+    color: #F18D24; }
+  /* line 250, /Users/hideki/Desktop/valu_copy/style.scss */
+  .recommend-section__main-text {
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    line-height: 2.6rem;
+    margin-top: 1.6rem; }
+  /* line 258, /Users/hideki/Desktop/valu_copy/style.scss */
+  .recommend-section__btn {
+    color: white;
+    background-color: #FCBE35;
+    margin-top: 2.9rem; }
+  /* line 264, /Users/hideki/Desktop/valu_copy/style.scss */
+  .recommend-section__right {
+    width: 60%;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3rem; }
+  /* line 273, /Users/hideki/Desktop/valu_copy/style.scss */
+  .recommend-section__image {
+    width: 38rem;
+    margin-left: 8.2rem;
+    margin-bottom: 1rem; }
+
+/*-----------------------------------
+*  make stylesheet
+*-----------------------------------*/
+/* line 286, /Users/hideki/Desktop/valu_copy/style.scss */
+.make-section {
+  width: 100%;
+  height: 45.5rem; }
+  /* line 290, /Users/hideki/Desktop/valu_copy/style.scss */
+  .make-section__inner {
+    display: flex;
+    padding-left: 4rem; }
+  /* line 295, /Users/hideki/Desktop/valu_copy/style.scss */
+  .make-section__left {
+    width: auto;
+    height: inherit;
+    padding-top: 8rem; }
+  /* line 301, /Users/hideki/Desktop/valu_copy/style.scss */
+  .make-section__image {
+    width: 48rem; }
+  /* line 305, /Users/hideki/Desktop/valu_copy/style.scss */
+  .make-section__right {
+    width: 34rem;
+    height: inherit;
+    padding-top: 8.2rem;
+    margin-left: 10rem; }
+  /* line 312, /Users/hideki/Desktop/valu_copy/style.scss */
+  .make-section__main-catch {
+    font-size: 2.2rem;
+    letter-spacing: 0.2rem;
+    line-height: 3rem;
+    font-weight: bold;
+    color: #F18D24; }
+  /* line 320, /Users/hideki/Desktop/valu_copy/style.scss */
+  .make-section__main-text {
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    line-height: 2.6rem;
+    padding-right: 4rem;
+    margin-top: 1.6rem; }
+  /* line 329, /Users/hideki/Desktop/valu_copy/style.scss */
+  .make-section__btn {
+    color: white;
+    background-color: #FCBE35;
+    margin-top: 2.9rem; }
+
+/*# sourceMappingURL=style.css.map */

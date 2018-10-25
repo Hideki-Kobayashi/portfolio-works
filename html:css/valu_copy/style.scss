@@ -1,0 +1,334 @@
+/*-----------------------------------
+*  default stylesheet
+*-----------------------------------*/
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  color: #323232;
+  margin: 0;
+}
+
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/*-----------------------------------
+*  vars
+*-----------------------------------*/
+
+$main-color: #FCBE35;
+$gray: #F7F7F7;
+
+/*-----------------------------------
+*  inner stylesheet
+*-----------------------------------*/
+.inner {
+  width: 96rem;
+  height: inherit;
+  margin: auto;
+}
+
+
+/*-----------------------------------
+*  button stylesheet
+*-----------------------------------*/
+
+.va-btn {
+  width: 12rem;
+  height: 3.2rem;
+  font-size: 1.2rem;
+  border-radius: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.va-btn-lg {
+  width: 38.4rem;
+  height: 5.6rem;
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  border-radius: 2.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.va-btn-md {
+  width: 34rem;
+  height: 6rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  border-radius: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/*-----------------------------------
+*  header stylesheet
+*-----------------------------------*/
+
+.header {
+  width: 100%;
+  height: 6.4rem;
+  background-color: #FCBE35;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0rem .5rem .3rem -0.3rem rgba(246, 186, 52, 0.6);
+  position: fixed;
+}
+
+.header-left {
+  width: 22rem;
+  height: inherit;
+  margin-left: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left__logo {
+  width: 11.5rem;
+  height: 2.1rem;
+}
+
+.header-left__find {
+  display: flex;
+  align-items: center;
+}
+
+.find-icon {
+  font-size: 2rem;
+  margin-right: 0.5rem;
+}
+
+.find-text {
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  color: white;
+}
+
+.header-right {
+  width: 40rem;
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.header-right__search-icon {
+  font-size: 2rem;
+  margin-right: 3.2rem;
+}
+
+.header-right__question-icon {
+  font-size: 2rem;
+  margin-right: 3.2rem;
+}
+
+
+.header-right__login-btn {
+  background-color: white;
+  margin-right: 1.6rem;
+  font-weight: bold;
+
+}
+
+.header-right__register-btn {
+  color: white;
+  background-color: black;
+}
+
+
+
+/*-----------------------------------
+*  hero stylesheet
+*-----------------------------------*/
+
+.hero {
+  width: 100%;
+  height: 76.4rem;
+  padding-top: 6.4rem;
+  background-color: $main-color;
+  display: flex;
+}
+
+.hero__left {
+  width: 44rem;
+  height: inherit;
+  color: white;
+  padding-left: 4rem;
+}
+
+
+.hero__ {
+  &main-catch {
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    margin-top: 19.2rem;
+  }
+
+  &sub-catch {
+    margin-top: 1.4rem;
+    letter-spacing: 0.1rem;
+  }
+
+  &start-btn {
+    color: $main-color;
+    background-color: white;
+    margin-top: 3.2rem;
+  }
+
+  &dl-btn {
+    margin-top: 1.6rem;
+    border: 2px solid white;
+  }
+
+  &image {
+    width: 79.2rem;
+    margin-left: 0.8rem;
+  }
+
+}
+
+.dl-btn-icon {
+  font-size: 2.4rem;
+  color: white;
+  margin-right: 0.8rem;
+  padding-bottom: 0.4rem;
+}
+
+
+
+/*-----------------------------------
+*  recommend stylesheet
+*-----------------------------------*/
+
+
+.recommend-section {
+  width: 100%;
+  height: 47.6rem;
+  background-color: $gray;
+
+  &__inner {
+    padding-left: 7rem;
+    padding-right: 7rem;
+    display: flex;
+  }
+
+  &__left {
+    width: 40%;
+    height: inherit;
+    padding-top: 9rem;
+  }
+
+  &__main-catch {
+    font-size: 2.3rem;
+    letter-spacing: 0.2rem;
+    line-height: 3rem;
+    font-weight: bold;
+    color: #F18D24;
+  }
+
+  &__main-text {
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    line-height: 2.6rem;
+    margin-top: 1.6rem;
+  }
+
+  &__btn {
+    color: white;
+    background-color: $main-color;
+    margin-top: 2.9rem;
+  }
+
+  &__right {
+    width: 60%;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3rem;
+  }
+
+  &__image {
+    width: 38rem;
+    margin-left: 8.2rem;
+    margin-bottom: 1rem;
+  }
+
+}
+
+
+/*-----------------------------------
+*  make stylesheet
+*-----------------------------------*/
+
+.make-section {
+  width: 100%;
+  height: 45.5rem;
+
+  &__inner {
+    display: flex;
+    padding-left: 4rem;
+  }
+
+  &__left {
+    width: auto;
+    height: inherit;
+    padding-top: 8rem;
+  }
+
+  &__image {
+    width: 48rem;
+  }
+
+  &__right {
+    width: 34rem;
+    height: inherit;
+    padding-top: 8.2rem;
+    margin-left: 10rem;
+  }
+
+  &__main-catch {
+    font-size: 2.2rem;
+    letter-spacing: 0.2rem;
+    line-height: 3rem;
+    font-weight: bold;
+    color: #F18D24;
+  }
+
+  &__main-text {
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    line-height: 2.6rem;
+    padding-right: 4rem;
+    margin-top: 1.6rem;
+  }
+
+  &__btn {
+    color: white;
+    background-color: $main-color;
+    margin-top: 2.9rem;
+  }
+}

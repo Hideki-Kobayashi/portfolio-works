@@ -1,0 +1,206 @@
+/*-----------------------------------
+*  default stylesheet
+*-----------------------------------*/
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  color: #323232;
+}
+
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+[v-cloak] {
+  display:none;
+}
+
+
+/*-----------------------------------
+*  header stylesheet
+*-----------------------------------*/
+.header {
+  width: 100%;
+  height: 4rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(#E8E6E8, #D2D0D2)
+}
+
+.header__left {
+  max-width: 60rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.header__user-name {
+  font-size: 1.6rem;
+}
+
+.header__right {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.header__search-form {}
+
+.search-box {
+  width: 20rem;
+  border-radius: 0.4rem;
+  display: none;
+}
+
+
+/*-----------------------------------
+*  body stylesheet
+*-----------------------------------*/
+
+.body {
+  display: flex;
+}
+
+.body__sidebar {}
+
+.sidebar {
+  width: 22rem;
+  height: auto;
+  min-height: 58rem;
+  background-color: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar-list {
+  width: 100%;
+  height: 55rem;
+}
+
+.sidebar-add-btn {
+  width: 100%;
+  height: 3rem;
+  font-size: 2.4rem;
+  color: gray;
+  background: linear-gradient(#FAFAF9, #EBEBEA);
+  box-shadow: 0rem -0.2rem 0.2rem #E2E2E2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.main {
+  width: 100%;
+  height: auto;
+  min-height: 58rem;
+  background-image: url(../img/bg-main.png);
+  background-position: center;
+  background-size: cover;
+
+}
+
+.main__add-todo {
+  width: 100%;
+  height: 5.6rem;
+  padding: 1rem;
+}
+
+.add-form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.add-todo {
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: 2.4rem;
+  background: rgba(100, 100, 100, 0.5);
+  border-radius: 0.3rem;
+}
+
+.add-date {
+  height: 100%;
+  color: white;
+  font-size: 2.4rem;
+  background: rgba(100, 100, 100, 0.5);
+  border-radius: 0.3rem;
+}
+
+.add-btn {
+  display: none;
+}
+
+.main__todos {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.todo-item {
+  width: 100%;
+  height: auto;
+  min-height: 3.6rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  background-color: white;
+  border-radius: 0.3rem;
+  display: grid;
+  grid-template-columns: 3rem 1fr 15rem;
+  align-items: center;
+}
+
+.todo-chkbox {
+  width: 3rem;
+  height: 3rem;
+  margin-left: 1rem;
+}
+
+.todo-comment {
+  margin-left: 1rem;
+}
+
+.todo-date {
+  
+}
+
+
+/* プレースホルダーの中央寄せ */
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  text-align: center;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  text-align: center;
+}
+
+:-ms-input-placeholder {
+  text-align: center;
+}

@@ -1,0 +1,196 @@
+@charset "UTF-8";
+/*-----------------------------------
+*  default stylesheet
+*-----------------------------------*/
+/* line 4, /Users/hideki/Desktop/self_quest/src/style/style.scss */
+* {
+  box-sizing: border-box; }
+
+/* line 8, /Users/hideki/Desktop/self_quest/src/style/style.scss */
+html {
+  font-size: 62.5%; }
+
+/* line 12, /Users/hideki/Desktop/self_quest/src/style/style.scss */
+body {
+  font-size: 1.6rem;
+  color: #323232; }
+
+/* line 17, /Users/hideki/Desktop/self_quest/src/style/style.scss */
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none; }
+
+/* line 23, /Users/hideki/Desktop/self_quest/src/style/style.scss */
+img {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+/* line 29, /Users/hideki/Desktop/self_quest/src/style/style.scss */
+[v-cloak] {
+  display: none; }
+
+/*-----------------------------------
+*  header stylesheet
+*-----------------------------------*/
+/* line 37, /Users/hideki/Desktop/self_quest/src/style/style.scss */
+.header {
+  width: 100%;
+  height: 4rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(#E8E6E8, #D2D0D2); }
+
+/* line 48, /Users/hideki/Desktop/self_quest/src/style/style.scss */
+.header__left {
+  max-width: 60rem;
+  height: 3rem;
+  display: flex;
+  align-items: center; }
+
+/* line 55, /Users/hideki/Desktop/self_quest/src/style/style.scss */
+.header__user-name {
+  font-size: 1.6rem; }
+
+/* line 59, /Users/hideki/Desktop/self_quest/src/style/style.scss */
+.header__right {
+  height: 3rem;
+  display: flex;
+  align-items: center; }
+
+/* line 67, /Users/hideki/Desktop/self_quest/src/style/style.scss */
+.search-box {
+  width: 20rem;
+  border-radius: 0.4rem;
+  display: none; }
+
+/*-----------------------------------
+*  body stylesheet
+*-----------------------------------*/
+/* line 78, /Users/hideki/Desktop/self_quest/src/style/style.scss */
+.body {
+  display: flex; }
+
+/* line 84, /Users/hideki/Desktop/self_quest/src/style/style.scss */
+.sidebar {
+  width: 22rem;
+  height: auto;
+  min-height: 58rem;
+  background-color: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+/* line 94, /Users/hideki/Desktop/self_quest/src/style/style.scss */
+.sidebar-list {
+  width: 100%;
+  height: 55rem; }
+
+/* line 99, /Users/hideki/Desktop/self_quest/src/style/style.scss */
+.sidebar-add-btn {
+  width: 100%;
+  height: 3rem;
+  font-size: 2.4rem;
+  color: gray;
+  background: linear-gradient(#FAFAF9, #EBEBEA);
+  box-shadow: 0rem -0.2rem 0.2rem #E2E2E2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none; }
+
+/* line 112, /Users/hideki/Desktop/self_quest/src/style/style.scss */
+.main {
+  width: 100%;
+  height: auto;
+  min-height: 58rem;
+  background-image: url(../img/bg-main.png);
+  background-position: center;
+  background-size: cover; }
+
+/* line 122, /Users/hideki/Desktop/self_quest/src/style/style.scss */
+.main__add-todo {
+  width: 100%;
+  height: 5.6rem;
+  padding: 1rem; }
+
+/* line 128, /Users/hideki/Desktop/self_quest/src/style/style.scss */
+.add-form {
+  width: 100%;
+  height: 100%;
+  display: flex; }
+
+/* line 134, /Users/hideki/Desktop/self_quest/src/style/style.scss */
+.add-todo {
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: 2.4rem;
+  background: rgba(100, 100, 100, 0.5);
+  border-radius: 0.3rem; }
+
+/* line 143, /Users/hideki/Desktop/self_quest/src/style/style.scss */
+.add-date {
+  height: 100%;
+  color: white;
+  font-size: 2.4rem;
+  background: rgba(100, 100, 100, 0.5);
+  border-radius: 0.3rem; }
+
+/* line 151, /Users/hideki/Desktop/self_quest/src/style/style.scss */
+.add-btn {
+  display: none; }
+
+/* line 155, /Users/hideki/Desktop/self_quest/src/style/style.scss */
+.main__todos {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem; }
+
+/* line 161, /Users/hideki/Desktop/self_quest/src/style/style.scss */
+.todo-item {
+  width: 100%;
+  height: auto;
+  min-height: 3.6rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  background-color: white;
+  border-radius: 0.3rem;
+  display: grid;
+  grid-template-columns: 3rem 1fr 15rem;
+  align-items: center; }
+
+/* line 174, /Users/hideki/Desktop/self_quest/src/style/style.scss */
+.todo-chkbox {
+  width: 3rem;
+  height: 3rem;
+  margin-left: 1rem; }
+
+/* line 180, /Users/hideki/Desktop/self_quest/src/style/style.scss */
+.todo-comment {
+  margin-left: 1rem; }
+
+/* プレースホルダーの中央寄せ */
+/* line 190, /Users/hideki/Desktop/self_quest/src/style/style.scss */
+::-webkit-input-placeholder {
+  text-align: center; }
+
+/* line 194, /Users/hideki/Desktop/self_quest/src/style/style.scss */
+:-moz-placeholder {
+  /* Firefox 18- */
+  text-align: center; }
+
+/* line 199, /Users/hideki/Desktop/self_quest/src/style/style.scss */
+::-moz-placeholder {
+  /* Firefox 19+ */
+  text-align: center; }
+
+/* line 204, /Users/hideki/Desktop/self_quest/src/style/style.scss */
+:-ms-input-placeholder {
+  text-align: center; }
+
+/*# sourceMappingURL=style.css.map */
