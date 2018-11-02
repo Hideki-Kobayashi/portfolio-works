@@ -42,9 +42,19 @@
 
 
 <style lang="scss">
+  $sp: 768px; // スマホなど
+
+  @mixin sp {
+    @media (max-width: ($sp)) {
+      @content;
+    }
+  }
+
   .biography {
     width: 100%;
     padding-bottom: 7.2rem;
+    
+    
   }
 
   .header-catch {
@@ -62,10 +72,17 @@
   .bio-content {
     font-size: 1.6rem;
     padding-top: 2rem;
+    
+    @include sp{
+      font-size: 1rem;
+    }
   }
 
   .name-text {
     font-size: 2rem;
+    @include sp{
+      font-size: 1.6rem;
+    }
   }
 
   .bio-list {

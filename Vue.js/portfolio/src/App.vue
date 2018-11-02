@@ -5,7 +5,15 @@
         <div class="header__left">
           東京、フリーエンジニア 小林秀樹
         </div>
-        <div class="header__right"></div>
+        <div class="header__right">
+
+        </div>
+      </div>
+      <div class="header-sp">
+        <router-link to="/" class="nav-item">HOME</router-link>
+        <router-link to="/Portfolio" class="nav-item">PORTFOLIO</router-link>
+        <router-link to="/Biography" class="nav-item">BIOGRAPHY</router-link>
+        <router-link to="/Contact" class="nav-item">CONTACT</router-link>
       </div>
     </div>
 
@@ -50,8 +58,15 @@
 </script>
 
 <style lang="scss">
-  
-/*-----------------------------------
+  $sp: 768px; // スマホなど
+
+  @mixin sp {
+    @media (max-width: ($sp)) {
+      @content;
+    }
+  }
+
+  /*-----------------------------------
 *  default stylesheet
 *-----------------------------------*/
   * {
@@ -65,6 +80,10 @@
   body {
     font-size: 1.6rem;
     color: #323232;
+
+    @include sp {
+      font-size: 1rem;
+    }
   }
 
   a {
@@ -80,9 +99,11 @@
   }
 
 
-/*-----------------------------------
+  /*-----------------------------------
 *  main stylesheet
 *-----------------------------------*/
+
+
 
   .container {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -96,6 +117,13 @@
     grid-template:
       "header header"4rem "nav main"calc(100vh - 8rem) "footer footer"
       /25rem 1fr;
+
+    @include sp {
+      grid-template:
+        "header"4rem "main"calc(100vh - 8rem) "footer"
+        /1fr;
+    }
+
 
     &__header {
       width: 100%;
@@ -111,7 +139,7 @@
   }
 
 
-/*-----------------------------------
+  /*-----------------------------------
 *  header stylesheet
 *-----------------------------------*/
 
@@ -124,13 +152,30 @@
     align-items: center;
 
     &__left {
+      font-size: 1.6rem;
       margin-left: 2rem;
     }
   }
 
-/*-----------------------------------
+  .header-sp {
+    display: none;
+
+    @include sp {
+      font-size: 1.4rem;
+      color: white;
+      background-color: black;
+      display: flex;
+      justify-content: space-around;
+      z-index: 999;
+      position: relative;
+    }
+  }
+
+  /*-----------------------------------
 *  body stylesheet
 *-----------------------------------*/
+
+
 
   //body style
   .body {
@@ -145,6 +190,10 @@
     &__main-section {
       height: 100%;
       grid-area: main;
+
+      @include sp {
+        padding-top: 1.6rem;
+      }
     }
   }
 
@@ -157,6 +206,12 @@
     background-color: black;
     font-size: 1.6rem;
     grid-area: nav;
+
+    @include sp {
+      display: none;
+    }
+
+    ;
 
     &-top-item {
       text-align: center;
@@ -187,7 +242,7 @@
   }
 
 
-/*-----------------------------------
+  /*-----------------------------------
 *  footer stylesheet
 *-----------------------------------*/
 

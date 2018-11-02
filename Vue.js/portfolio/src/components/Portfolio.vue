@@ -4,7 +4,7 @@
       <div class="header-catch">Portfolio</div>
     </div>
     <div class="portfolio__content port-content">
-      
+
       <div class="port__table-of-contents">
         <div>目次</div>
         <a class="table-of-contents__item" href="#html/css">１、html/css</a>
@@ -38,7 +38,7 @@
               <div class="card__img"><img src="../assets/img/portfolio.png" alt=""></div>
             </a>
             <div class="card__discription">Vue.jsでSPA(シングルページアプリケーション)を実装しています。</div>
-            <a class="card__link" href="" target="_blank">gitはこちら</a>
+            <a class="card__link" href="https://github.com/Hideki-Kobayashi/portfolio-works/tree/master/Vue.js/portfolio" target="_blank">gitはこちら</a>
           </div>
 
           <div class="card">
@@ -58,7 +58,7 @@
             <div class="card__discription">Todoの項目と締切日を登録できるTodoアプリです。</div>
             <a class="card__link" href="https://github.com/Hideki-Kobayashi/portfolio-works/tree/master/Vue.js/self_quest" target="_blank">gitはこちら</a>
           </div>
-          
+
           <div class="card">
             <a href="http://eclaircom.html.xdomain.jp/hello-spa/" target="_blank">
               <div class="card__title">IPを取得するSPA</div>
@@ -84,7 +84,7 @@
             <div class="card__discription">Python/Djangoでtodo機能からログイン機能まで実装しています。</div>
             <a class="card__link" href="https://github.com/Hideki-Kobayashi/portfolio-works/tree/master/python/pytech-todoapp" target="_blank">gitはこちら</a>
           </div>
-          
+
           <div class="card">
             <a href="" target="_blank">
               <div class="card__title">人工知能チャットボット</div>
@@ -93,7 +93,7 @@
             <div class="card__discription">シェルで会話をします。こちらの入力した文章を品詞分解し学習していきます。</div>
             <a class="card__link" href="https://github.com/Hideki-Kobayashi/portfolio-works/tree/master/python/unmo" target="_blank">gitはこちら</a>
           </div>
-          
+
           <div class="card">
             <a href="" target="_blank">
               <div class="card__title">日経平均のスクレイピング</div>
@@ -103,7 +103,7 @@
             <a class="card__link" href="https://github.com/Hideki-Kobayashi/portfolio-works/tree/master/python/%E3%82%B9%E3%82%AF%E3%83%AC%E3%82%A4%E3%83%94%E3%83%B3%E3%82%B0" target="_blank">gitはこちら</a>
           </div>
 
-          
+
         </div>
       </div>
     </div>
@@ -113,6 +113,15 @@
 
 
 <style lang="scss">
+  $sp: 768px; // スマホなど
+
+  @mixin sp {
+    @media (max-width: ($sp)) {
+      @content;
+    }
+  }
+
+
   .header-catch {
     font-size: 3rem;
     padding-top: 2rem;
@@ -129,14 +138,17 @@
     padding-top: 2rem;
     padding-bottom: 3rem;
   }
-  
+
   .port__table-of-contents {
     width: 30rem;
     margin-bottom: 5rem;
     padding: 0.8rem;
     background-color: #F5F5F5;
+    @include sp{
+      width: 100%;
+    }
   }
-  
+
   .table-of-contents__item {
     display: block;
   }
