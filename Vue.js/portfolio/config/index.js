@@ -43,7 +43,8 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: './',
+    assetsPublicPath: 'http://eclaircom.html.xdomain.jp/portfolio/kobayashi-hideki/',
+    'http://eclaircom.html.xdomain.jp/portfolio/kobayahshi-hideki/
 
     /**
      * Source Maps

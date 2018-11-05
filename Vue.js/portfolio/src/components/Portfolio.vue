@@ -102,6 +102,24 @@
             <div class="card__discription">日経新聞のサイトから、日経平均株価をスクレイピングします。</div>
             <a class="card__link" href="https://github.com/Hideki-Kobayashi/portfolio-works/tree/master/python/%E3%82%B9%E3%82%AF%E3%83%AC%E3%82%A4%E3%83%94%E3%83%B3%E3%82%B0" target="_blank">gitはこちら</a>
           </div>
+          
+          <div class="card">
+            <a href="" target="_blank">
+              <div class="card__title">Twitterの自動いいね</div>
+              <div class="card__img"><img src="../assets/img/auto-like.png" alt=""></div>
+            </a>
+            <div class="card__discription">特定の文字列を含むツイートを自動いいねします。</div>
+            <a class="card__link" href="https://github.com/Hideki-Kobayashi/portfolio-works/blob/master/python/Twitter_programs/autoLike.py" target="_blank">gitはこちら</a>
+          </div>
+          
+          <div class="card">
+            <a href="" target="_blank">
+              <div class="card__title">Twitterの自動リムーブ</div>
+              <div class="card__img"><img src="../assets/img/auto-remove.png" alt=""></div>
+            </a>
+            <div class="card__discription">フォロワー100人以下のフォローを解除します。</div>
+            <a class="card__link" href="https://github.com/Hideki-Kobayashi/portfolio-works/blob/master/python/Twitter_programs/autoFollowerRemove.py" target="_blank">gitはこちら</a>
+          </div>
 
 
         </div>
